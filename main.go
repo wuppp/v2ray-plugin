@@ -276,6 +276,9 @@ func startV2Ray() (core.Server, error) {
 		if _, b := opts.Get("tls"); b {
 			*tlsEnabled = true
 		}
+		if c, b := opts.Get("httphost"); b {
+			*httpHost = c
+		}
 		if c, b := opts.Get("host"); b {
 			*host = c
 		}
